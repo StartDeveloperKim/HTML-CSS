@@ -3,20 +3,37 @@
     <head></head>
     <body>
         <style>
-        li{
-            list-style: decimal;
-        }  
+            li{list-style: none;}
+            .colorBtn{
+                width: 100px;
+                height: 30px;
+                background-color: green;
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                cursor: pointer;
+                border-radius: 6px;
+            }
         </style>
-        <!-- h는 제목태그로서 1부터 6까지 있다. -->
-        <h1>제목</h1>
-        <h2>제목</h2>
-        <h6>제목</h6>
-
-        <!-- ul은 목록태그이고 li는 그 목록을  나타낼 수 있는 태그이다. -->
-        <ul>
-            <li>목록1</li>
-            <li>목록2</li>
-            <li>목록3</li>
-        </ul>
+        
+        <form>
+            <ul>
+                <li><input type="text"></li>
+                <li><input type="password"></li>
+                <li>
+                    <label><input type="radio" name="fruit" id="orange">오렌지</label>
+                    <label><input type="radio" name="fruit" id="apple">사과</label>
+                    <label><input type="radio" name="fruit" id="strawberry">딸기</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="fruit" id="orange">오렌지</label>
+                    <label><input type="checkbox" name="fruit" id="apple">사과</label>
+                    <label><input type="checkbox" name="fruit" id="strawberry">딸기</label>
+                </li>
+                <!-- <li><input type="button", value="버튼"></li>
+                <li><input type="submit", value="submit버튼"></li> -->
+                <li><div class="colorBtn">버튼입니다</div></li>
+            </ul>
+        </form>
     </body>
 </html>
