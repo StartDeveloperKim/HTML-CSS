@@ -3,29 +3,20 @@
     <head></head>
     <body>
         <style>
-        .blockTag{
-            background-color:yellowgreen;
-        }
-        .blockTag > div{
-            background: tomato;
-            border: 1px solid black;
-        }
-
-        .inlineTag span{
-            background: skyblue;
-            border: 1px solid black;
-        }
+        li{
+            list-style: decimal;
+        }  
         </style>
-        <div class="blockTag"> 
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-        </div>
+        <!-- h는 제목태그로서 1부터 6까지 있다. -->
+        <h1>제목</h1>
+        <h2>제목</h2>
+        <h6>제목</h6>
 
-        <div class="inlineTag">
-            <span>inline 1</span>
-            <span>inline 2</span>
-            <span>inline 3</span>
-        </div>
+        <!-- ul은 목록태그이고 li는 그 목록을  나타낼 수 있는 태그이다. -->
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+        </ul>
     </body>
 </html>
