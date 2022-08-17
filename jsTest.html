@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회원가입</title>
-
+    <meta charset="UTF-8">
+    <title>아이디 등록</title>
 </head>
 <body>
-  <h1 id="clock" style="color:black">시계</h1>
+    <h1>회원가입</h1>
+    <form action = home.html method="post" onsubmit="return checkAll()">
+        아이디<br>
+        <input type="text" id="id">
+        <button type="button">아이디 중복체크</button>
+        <p id="id_error"></p>
+        비밀번호<br>
+        <input type="password" id="password">
+        <p id="pw_error"></p>
+        이름<br>
+        <input type="name" id="name">
+        <p id="name_error"></p><br>
 
-  <script>
-    var target = document.getElementById("clock");
-    function clock(){
-      let time = new Date();
+        <button type="submit">등록</button>
+    </form>
+    <p id="demo"></p>
 
-      let month = time.getMonth();
-      let date = time.getDate();
-      let day = time.getDay();
-      let week = ['일', '월', '화', '수', '목', '금', '토'];
-
-      let hours = time.getHours();
-      let minutes = time.getMinutes();
-      let seconds = time.getSeconds();
-
-      let miilisec = time.getMilliseconds();
-
-      target.innerHTML = 
-      `${month + 1}월 ${date}일 ${week[day]}요일 ` +
-            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}:${miilisec}`;
+<script>
+    function checkIdDuplicate(){
+        
     }
-    clock();
-    setInterval(clock, 10);
-  </script>
+
+    function checkAll(){
+        let id = document.getElementById("id");
+        let password = document.getElementById("password");
+        let name = document.getElementById("name");
+        
+        /*ID 유효성 검사*/
+        if(id.value === ""){
+          document.getElementById("id_error").innerHTML = "ID를 입력해주세요"
+          return false
+        }
+        else if(password.value === ""){
+          document.getElementById("pw_error").innerHTML = "Password를 입력해주세요"
+          return false
+        }
+        else if(name.value === ""){
+          document.getElementById("name_error").innerHTML = "이름을 입력해주세요"
+          return false
+        }
+        else{
+          return true
+        }
+
+        document.getElementById("demo").innerHTML = "실패!!"
+    } 
+
+    function checkID(){
+      
+    }
+
+    function checkPassword(){
+
+    }
+
+    function checkName(){
+
+    }
+</script>
 </body>
 </html>
